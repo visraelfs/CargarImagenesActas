@@ -1,0 +1,27 @@
+﻿<Window x:Class="CargarImagenesActas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CargarImagenesActas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="165" Width="915">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="545*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="297*"/>
+        </Grid.ColumnDefinitions>
+
+        <CheckBox Content="¿Es Site Survey?" Margin="138,40,53,0" VerticalAlignment="Top" RenderTransformOrigin="-1.971,-1.231" Name="chkSS" Height="15" Grid.Column="2" />
+        <TextBox Name="IdActa" Margin="26,36,420,0" TextWrapping="Wrap" VerticalAlignment="Top" PreviewTextInput="NumberOnly_PreviewTextInput" PreviewKeyDown="NumberOnly_PreviewKeyDown" DataObject.Pasting="NumberOnly_Pasting" Height="23"/>
+        <Label Content="Nombre Imagen" Margin="140,9,186,0" VerticalAlignment="Top" Height="26"/>
+        <ComboBox Name="cbNombre" Margin="136,37,148,0" VerticalAlignment="Top" Height="22"/>
+        <Label Content="Id Acta" Margin="26,7,420,0" VerticalAlignment="Top" Height="26"/>
+        <TextBox Name="rutaImagen" IsEnabled="False" Margin="407,37,222,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="22" Grid.ColumnSpan="3"/>
+        <Button Name="btnRuta" Content="..." Margin="55,37,200,0" VerticalAlignment="Top" Height="22" Click="SeleccionarImagen_Click" RenderTransformOrigin="0.286,0.593" Grid.Column="2"/>
+        <Label Content="Ruta Imagen" Margin="407,10,221,0" VerticalAlignment="Top" Height="27" Grid.ColumnSpan="3"/>
+        <Button Name="btnCargar" Content="Cargar imagen" Margin="26,90,27,0" VerticalAlignment="Top" Click="GuardarImagen_Click" Height="20" Grid.ColumnSpan="3"/>
+
+    </Grid>
+</Window>
