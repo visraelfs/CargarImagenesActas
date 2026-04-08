@@ -42,6 +42,7 @@ namespace CargarImagenesActas.Clases
                 {
                     tmpFiles tmp = new tmpFiles();
                     tmp.FileName = _nombreImagen + ".jpg";
+                    tmp.IdServicio = _idActa;
                     tmp.Data = fileBytes;
                     tmp.Tipo = tipo;
 
